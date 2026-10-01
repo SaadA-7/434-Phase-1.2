@@ -1,0 +1,128 @@
+<!-- 
+ Contains app container, screen titles
+ Currently: tab 1, tab 2, placeholder tab 3-6, fixed bottom nav bar
+
+ style.css: sizing, fram dimensions 640x960, colors, 
+            fixed bottom nav bar alignment, tab 1 scrolling, 
+            tab 2 lower right positioning
+
+script.js: tab switching logic 
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CMSC 434 - Phase 1.2 Prototype</title>
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Main Device Shell (640x960) -->
+  <div id="app-device">
+    
+    <!-- MAIN CONTENT VIEWPORT -->
+    <div class="content-area">
+
+      <!-- TAB 1: Text Screen (Scroll Text) -->
+      <div id="tab-text" class="tab-content active">
+        <div id="text-tab-content">
+          <div class="screen-title">-Text Screen-</div>
+          <p class="scroll-paragraph">This is a super long piece of text that will require scrolling to read the entire content. So scroll down, more and more...</p>
+          <p class="scroll-paragraph">This is a super long piece of text that will require scrolling to read the entire content. So scroll down, more and more...</p>
+          <p class="scroll-paragraph">This is a super long piece of text that will require scrolling to read the entire content. So scroll down, more and more...</p>
+          <p class="scroll-paragraph">This is a super long piece of text that will require scrolling to read the entire content. So scroll down, more and more...</p>
+          <p class="scroll-paragraph">This is a super long piece of text that will require scrolling to read the entire content. So scroll down, more and more...</p>
+          <p class="scroll-paragraph">This is a super long piece of text that will require scrolling to read the entire content. So scroll down, more and more...</p>
+          <p class="scroll-paragraph">This is a super long piece of text that will require scrolling to read the entire content. So scroll down, more and more...</p>
+          <p class="scroll-paragraph">This is a super long piece of text that will require scrolling to read the entire content. So scroll down, more and more...</p>
+          <p class="scroll-paragraph">This is a super long piece of text that will require scrolling to read the entire content. So scroll down, more and more...</p>
+          <p class="scroll-paragraph">This is a super long piece of text that will require scrolling to read the entire content. So scroll down, more and more...</p>
+          <p class="scroll-paragraph">This is a super long piece of text that will require scrolling to read the entire content. So scroll down, more and more...</p>
+          <p class="scroll-paragraph">This is a super long piece of text that will require scrolling to read the entire content. So scroll down, more and more...</p>
+          <p class="scroll-paragraph">This is a super long piece of text that will require scrolling to read the entire content. So scroll down, more and more...</p>
+          <p class="scroll-paragraph">This is a super long piece of text that will require scrolling to read the entire content. So scroll down, more and more...</p>
+          <p class="scroll-paragraph">You reached the end of the long text page for Tab 1!</p>
+        </div>
+      </div>
+ 
+ 
+      <!-- TAB 2: Lower Right Screen --> 
+      <div id="tab-lr" class="tab-content">
+        <div id="lr-tab-content">
+          <div class="screen-title">-Text in Lower Right-</div>
+          <div class="lower-right-text">Down Here</div>
+        </div>
+      </div>
+
+
+      <!-- TAB 3: Colors (Teammate) -->
+      <div id="tab-colors" class="tab-content">
+        <!-- code Goes Here -->
+      </div>
+
+
+      <!-- TAB 4: Profile (Teammate) -->
+      <div id="tab-profile" class="tab-content">
+        <!-- Code Goes Here -->
+      </div>
+
+
+      <!-- TAB 5: Choices (Teammate) -->
+      <div id="tab-choices" class="tab-content">
+        <!-- Code Goes here -->
+      </div>
+
+
+      <!-- TAB 6: ToDo (Teammate) -->
+      <div id="tab-todo" class="tab-content">
+        <!-- code Goes Here -->
+      </div>
+
+    </div>
+
+
+    <!-- FIXED BOTTOM NAV BAR -->
+    <div id="nav-bar">
+      
+      <button class="nav-button active" onclick="switchTab('tab-text', this)">
+        <img src="icons/text.png" class="nav-icon" alt="Text Icon">
+        <span>Text</span>
+      </button>
+
+      <button class="nav-button" onclick="switchTab('tab-lr', this)">
+        <img src="icons/down-right-arrow.png" class="nav-icon" alt="LR Icon">
+        <span>LR</span>
+      </button>
+
+      <button class="nav-button" onclick="switchTab('tab-colors', this)">
+        <img src="icons/palette.png" class="nav-icon" alt="Colors Icon">
+        <span>Colors</span>
+      </button>
+
+      <button class="nav-button" onclick="switchTab('tab-profile', this)">
+        <img src="icons/user.png" class="nav-icon" alt="Profile Icon">
+        <span>Profile</span>
+      </button>
+
+      <button class="nav-button" onclick="switchTab('tab-choices', this)">
+        <img src="icons/choice.png" class="nav-icon" alt="Choices Icon">
+        <span>Choices</span>
+      </button>
+
+      <button class="nav-button" onclick="switchTab('tab-todo', this)">
+        <img src="icons/to-do-list.png" class="nav-icon" alt="ToDo Icon">
+        <span>ToDo</span>
+      </button>
+
+    </div>
+
+  </div>
+
+  <!--  JS File -->
+  <script src="script.js"></script>
+</body>
+</html>
+    
+    

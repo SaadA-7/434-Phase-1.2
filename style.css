@@ -1,0 +1,127 @@
+/* Reference note: tab header layout concepts modifed from w3school
+url : https://www.w3schools.com/howto/howto\_js\_tab\_header.asp
+*/
+
+/* Page Background Centering */
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* device size: 640px x 960px */
+#app-device {
+  width: 640px;
+  height: 960px;
+  background-color: rgb(238, 185, 193);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content area above the bottom nav bar */
+.content-area {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 70px;
+}
+
+/* Screen title header */
+.screen-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  color: black;
+}
+
+/* indiv tab screen views */
+.tab-content {
+  display: none;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Tab 1: Text screen with internal scrolling */
+#text-tab-content {
+  overflow-y: auto;
+  height: 100%;
+}
+
+.scroll-paragraph {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: black;
+}
+
+/* Tab 2: Lower right positioning */
+#lr-tab-content {
+  position: relative;
+  height: 100%;
+}
+
+.lower-right-text {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 18px;
+  font-weight: normal;
+  color: black;
+}
+
+/* fixed bottom nav bar */
+#nav-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 640px;
+  height: 70px;
+  background-color: #1c63f2;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+}
+
+.nav-button {
+  flex: 1;
+  height: 100%;
+  background: none;
+  border: none;
+  color: #ffff00;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 2px 0;
+}
+
+.nav-button:hover,
+.nav-button.active {
+  background-color: #0040c0;
+}
+
+/* Icon formatting */
+.nav-icon {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 3px;
+  object-fit: contain;
+}
