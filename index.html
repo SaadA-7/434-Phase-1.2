@@ -89,13 +89,40 @@ script.js: tab switching logic
 
       <!-- TAB 5: Choices (Teammate) -->
       <div id="tab-choices" class="tab-content">
-        <!-- Code Goes here -->
+        <div class="screen-title">-Choices Screen-</div>
+        <form id="choices-form" class="choices-form">
+          <fieldset>
+            <legend>Meal type</legend>
+            <label><input type="radio" name="meal-type" value="Breakfast" checked> Breakfast</label>
+            <label><input type="radio" name="meal-type" value="Lunch"> Lunch</label>
+            <label><input type="radio" name="meal-type" value="Dinner"> Dinner</label>
+          </fieldset>
+          <label for="main-ingredient">Main ingredient</label>
+          <select id="main-ingredient" name="main-ingredient">
+            <option value="Eggs">Eggs</option>
+            <option value="Chicken">Chicken</option>
+            <option value="Chickpeas">Chickpeas</option>
+          </select>
+          <button type="submit" class="tab-action">Show choices</button>
+        </form>
+        <p id="choices-result" class="choices-result" aria-live="polite">Choose a meal type and ingredient, then press Show choices.</p>
       </div>
 
 
       <!-- TAB 6: ToDo (Teammate) -->
       <div id="tab-todo" class="tab-content">
-        <!-- code Goes Here -->
+        <div class="todo-content">
+          <div class="screen-title">-To Do List-</div>
+          <form id="todo-form">
+            <label for="todo-input">New task</label>
+            <div class="todo-entry">
+              <input id="todo-input" type="text" placeholder="Enter a task" required>
+              <button type="submit" class="tab-action">Add task</button>
+            </div>
+          </form>
+          <p id="todo-status" aria-live="polite">No tasks yet. Add one above to get started.</p>
+          <ul id="todo-list" aria-label="Tasks"></ul>
+        </div>
       </div>
 
     </div>
