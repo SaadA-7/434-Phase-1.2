@@ -60,12 +60,30 @@ script.js: tab switching logic
       <!-- TAB 3: Colors (Teammate) -->
       <div id="tab-colors" class="tab-content">
         <!-- code Goes Here -->
+        <div class="screen-title">-Colors Screen-</div>
+        <p class="colors-line colors-yellow">Yellow text on a black background</p>
+        <p class="colors-line colors-purple">Purple text on a yellow background</p>
+        <div class="colors-pie" role="img" aria-label="Pie chart with six equal slices: red, orange, yellow, green, blue, and purple"></div>
       </div>
 
 
       <!-- TAB 4: Profile (Teammate) -->
       <div id="tab-profile" class="tab-content">
         <!-- Code Goes Here -->
+        <div class="screen-title">-Profile Screen-</div>
+        <div class="profile-details">
+          <button class="profile-image-button" type="button" aria-label="Show profile notification" onclick="document.getElementById('profile-notification').showModal()">
+            <img src="icons/profile-smiley.svg" class="profile-image" alt="Smiling face">
+          </button>
+          <p class="profile-name">Your Name</p>
+        </div>
+        <dialog id="profile-notification" aria-labelledby="profile-notification-title">
+          <h2 id="profile-notification-title">Profile Notification</h2>
+          <p>You tapped the profile image!</p>
+          <form method="dialog">
+            <button type="submit">Close</button>
+          </form>
+        </dialog>
       </div>
 
 

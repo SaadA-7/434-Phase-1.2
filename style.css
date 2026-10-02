@@ -125,3 +125,82 @@ body {
   margin-bottom: 3px;
   object-fit: contain;
 }
+
+
+/* Tab 3: Colorful text and pie chart */
+#tab-colors .colors-line {
+  padding: 14px;
+  margin: 0 0 16px;
+  font-size: 22px;
+  text-align: center;
+}
+
+#tab-colors .colors-yellow {
+  color: yellow;
+  background-color: black;
+}
+
+#tab-colors .colors-purple {
+  color: purple;
+  background-color: yellow;
+}
+
+#tab-colors .colors-pie {
+  width: 320px;
+  height: 320px;
+  margin: 50px auto 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    #ff3030 0deg 60deg,
+    #ff9500 60deg 120deg,
+    #ffff00 120deg 180deg,
+    #32df32 180deg 240deg,
+    #168bff 240deg 300deg,
+    #b832ff 300deg 360deg
+  );
+}
+
+/* Tab 4: Centered profile and dismissible notification */
+#tab-profile .profile-details {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#tab-profile .profile-image-button {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+#tab-profile .profile-image {
+  display: block;
+  width: 240px;
+  height: 240px;
+}
+
+#tab-profile .profile-name {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#profile-notification {
+  max-width: 360px;
+  padding: 24px;
+  border: 2px solid black;
+  border-radius: 8px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+#profile-notification::backdrop {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+#profile-notification button {
+  padding: 10px 24px;
+  font-size: 18px;
+  cursor: pointer;
+}
